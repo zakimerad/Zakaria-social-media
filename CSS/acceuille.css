@@ -1,0 +1,424 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #c7cbd1;
+    --second-bg-color: #ffffff;
+    --text-color: #070707;
+    --main-color: rgb(21, 61, 130);
+    --hover-color: #5f667279;
+    --border-color: #e0e0e0;
+    --btn-bg-color: #e8e8e8;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--main-color);
+}
+span{
+    color: var(--main-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 9%;
+    background: var(--second-bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none; 
+    color: var(--main-color);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #555; 
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.buttons a i {
+    font-size: 2rem;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    padding: 0.8rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.buttons a i:hover {
+    background-color: var(--main-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.buttons a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--main-color); 
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.buttons a img:hover {
+    transform: scale(1.1);
+}
+.buttons img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--main-color); 
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+.couverture {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+    background-color: rgba(255, 0, 0, 0);
+    object-fit: cover;
+    background-color: rgba(255, 0, 0, 0);
+    box-sizing: border-box;
+    
+}
+
+
+.photo-couverture {
+    border: 2px solid var(--second-bg-color);
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.photo-couverture img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+}
+
+.photo {
+    width: 15vw; 
+    height: 15vw; 
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 20%;
+    right: 25%;
+    z-index: 11;
+    border: solid 4px white;
+    
+    
+}
+
+.photo img {
+    width: 100%;
+    height: auto; 
+    border-radius:  5rem; 
+    object-fit: cover; 
+    border: solid 4px white;
+}
+.sasie {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.sasie .champs-saisie  {
+    width:70% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.champs-saisie input[type="text"],
+.champs-saisie input[type="file"] {
+    width: 90%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    transition: border-color 0.3s ease;
+    font-size: 1rem;
+}
+.champs-saisie input[type="text"]:focus,
+.champs-saisie input[type="file"]:focus {
+    border-color: var(--text-color);
+    outline: none;
+}
+.champs-saisie input[type="submit"] {
+    width: 50%;
+    padding: 0.6rem;
+    background-color: var(--text-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.champs-saisie input[type="submit"]:hover {
+    background-color: darken(var(--text-color), 10%);
+    transform: translateY(-3px);
+}
+.Salutation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#salut {
+    color: #070707;
+}
+.main-container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5rem;
+    margin-top: 10rem;
+    padding: 2rem;
+    
+}
+.comunauter {
+    background-color: var(--second-bg-color);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 20%;
+    margin-right: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+#users {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+.utilisateur {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s ease;
+    gap: 25%;
+    box-sizing: border-box;
+    padding: 1rem;
+
+}
+.utilisateur:hover {
+    background-color: var(--bg-color);
+}
+
+
+/* Section des posts */
+.posts-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Carte de post */
+.post-card {
+    background-color: var(--second-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.post-header img {
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.post-time {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* Contenu du post */
+.post-content {
+    padding: 1rem;
+}
+
+.post-content p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 400px;
+}
+
+/* Pied de page du post */
+.post-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.post-footer button {
+    font-size: 1.4rem;
+    background-color: var(--btn-bg-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.post-footer button:hover {
+    background-color: var(--main-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+.footer {
+    background-color: var(--second-bg-color);
+    padding: 2rem 9%;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer p {
+    margin-bottom: 1.6rem;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+.footer-nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+    font-size: 1.6rem;
+}
+
+.social-media li {
+    display: inline;
+    margin: 0 1rem;
+}
